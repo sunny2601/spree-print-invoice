@@ -127,7 +127,7 @@ pdf.bounding_box [0, pdf.cursor], :width => 540, :height => 450 do
   totals << [Prawn::Table::Cell.new( :text => "Subtotal:", :font_style => :bold), number_to_currency(@order.item_total)]
 
   @order.adjustments.each do |adjustment|
-    totals << [Prawn::Table::Cell.new( :text => adjustment.description + ":", :font_style => :bold), number_to_currency(adjustment.amount)]
+    totals << [Prawn::Table::Cell.new( :text => adjustment.label + ":", :font_style => :bold), number_to_currency(adjustment.amount)]
   end
 
   totals << [Prawn::Table::Cell.new( :text => "Order Total:", :font_style => :bold), number_to_currency(@order.total)]
