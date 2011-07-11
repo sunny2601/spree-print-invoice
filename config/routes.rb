@@ -1,5 +1,3 @@
-# Put your extension routes here.
-
-# map.namespace :admin do |admin|
-#   admin.resources :whatever
-# end  
+Rails.application.routes.draw do
+  match "admin/orders/invoice/:id" => "admin/orders#invoice"
+end
