@@ -164,5 +164,6 @@ Shipping is not refundable. | Special orders are non-refundable.
 In order to return a product prior authorization with a RMA number is mandatory
 All returned items must be in original un-opened packaging with seal intact.
 EOS
+  pdf.text Spree::PrintSettings::Config[:print_company_website], :align => :right, :size=>10
   pdf.text_box footer_message, :at => [ pdf.margin_box.left, pdf.margin_box.bottom + 30], :size => 8
 end
