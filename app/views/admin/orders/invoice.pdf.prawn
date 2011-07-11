@@ -6,16 +6,17 @@ ship_address = @order.ship_address ? @order.ship_address : Address.new
 
 pdf.font "Helvetica"
 
-pdf.image File.join( Rails.root, "public", Spree::PrintInvoice::Config[:print_invoice_logo_path] ), :at => [0,720], :scale => 0.65
+pdf.image File.join( Rails.root, "public", Spree::PrintSettings::Config[:print_logo_path] ), :at => [0,720], :scale => 0.65
 
 pdf.fill_color "005D99"
 pdf.text "Customer Invoice", :align => :center, :style => :bold, :size => 22
 pdf.fill_color "000000"
 
-pdf.text "Functional Ergonomics", :style => :bold, :align => :right, :size=>16
-pdf.text "2186 Mountain Grove Ave. Suite 405", :align => :right, :size=>14
-pdf.text "Burlington, ON L7P 4X4", :align => :right, :size=>14
-pdf.text "(905) 592-1588", :align => :right, :size=>14
+pdf.text Spree::PrintSettings::Config[:print_company_name], :style => :bold, :align => :right, :size=>16
+pdf.text Spree::PrintSettings::Config[:print_company_address1], :align => :right, :size=>14
+pdf.text Spree::PrintSettings::Config[:print_company_address2], :align => :right, :size=>14
+pdf.text Spree::PrintSettings::Config[:print_company_phone], :align => :right, :size=>14
+pdf.text Spree::PrintSettings::Config[:print_company_website], :align => :right, :size=>14
 
 pdf.font "Helvetica", :style => :bold, :size => 14
 pdf.text "Order Number: #{@order.number}"
