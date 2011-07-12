@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  match "admin/orders/invoice/:id" => "admin/orders#invoice"
+  namespace :admin do 
+    resources :orders do
+      member do
+        get :invoice
+      end
+    end
+  end
 end
