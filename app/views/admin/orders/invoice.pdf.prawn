@@ -77,7 +77,7 @@ end
 pdf.move_down 30
 
 # Line Items
-pdf.bounding_box [0, pdf.cursor], :width => 540, :height => 450 do
+pdf.bounding_box [0, pdf.cursor], :width => 540, :height => 440 do
   pdf.move_down 2
   data =  [[Prawn::Table::Cell.new( :text => "SKU", :font_style => :bold),
                 Prawn::Table::Cell.new( :text =>"Item Description", :font_style => :bold ),
@@ -166,5 +166,5 @@ All returned items must be in original un-opened packaging with seal intact.
 EOS
   pdf.move_down 2
   pdf.text Spree::PrintSettings::Config[:print_company_website], :align => :right, :size=>10
-  pdf.text_box footer_message, :at => [ pdf.margin_box.left, pdf.margin_box.bottom + 30], :size => 8
+  pdf.text_box footer_message, :at => [ pdf.margin_box.left, pdf.margin_box.bottom + 40], :size => 8
 end
