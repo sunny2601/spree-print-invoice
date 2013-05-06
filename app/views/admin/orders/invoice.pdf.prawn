@@ -159,7 +159,7 @@ end
 # Footer
 pdf.repeat :all do
   footer_message = <<EOS
-GST/HST: 884523416TR0001
+GST/HST: 884523416RT0001
 Shipping is not refundable. | Special orders are non-refundable.
 In order to return a product prior authorization with a RMA number is mandatory
 All returned items must be in original un-opened packaging with seal intact.
