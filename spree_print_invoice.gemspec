@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency 'spree_print_settings', '>= 2.2.1'
-  s.add_dependency 'spree_core', '~> 2.2.1'
+  s.add_dependency 'spree_core', '= 2.4.8.beta'
   s.add_dependency 'prawn', '0.8.4'
 
   s.add_development_dependency 'capybara', '~> 2.1'
